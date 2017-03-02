@@ -1,0 +1,10 @@
+language: none
+services:
+ - couchdb
+build:
+ pre_ci_boot:
+  image_name: vishnurao12/latest16
+  image_tag: latest
+  pull: false
+ ci:
+  - cqlsh -e "describe cluster; describe tables"
