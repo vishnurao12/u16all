@@ -1,6 +1,6 @@
 language: none
 services:
- - cassandra
+ - couchdb
 build:
  pre_ci_boot:
   image_name: vishnurao12/latest16
