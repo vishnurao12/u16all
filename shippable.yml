@@ -16,7 +16,7 @@ services:
  - sqlite
 build:
  pre_ci_boot:
-  image_name: drydock/u16all
+  image_name: vishnurao12/u16all
   image_tag: master
   pull: false
  ci:
