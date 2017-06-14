@@ -1,19 +1,6 @@
 language: none
 services:
  - cassandra
- - couchdb
- - elasticsearch
- - memcached
- - mongodb
- - mysql
- - neo4j
- - postgres
- - rabbitmq
- - redis
- - rethinkdb
- - riak
- - selenium
- - sqlite
 build:
  pre_ci_boot:
   image_name: vishnurao12/u16all
@@ -21,14 +8,3 @@ build:
   pull: false
  ci:
   - cqlsh -e "describe cluster; describe tables"
-  - curl localhost:5984
-  - curl localhost:9200
-  - (echo stats; echo quit) | nc 127.0.0.1 11211
-  - mongo --eval "db.stats()"
-  - mysql -e "show databases;"
-  - curl localhost:7474
-  - sudo su postgres -c "psql -c '\l'"
-  - rabbitmqctl status
-  - (echo "INFO"; echo -e "\nQUIT") | nc 127.0.0.1 6379
-  - riak-admin status
-  - curl --head http://localhost:4444
