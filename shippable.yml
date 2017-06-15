@@ -1,6 +1,10 @@
-{'build': {'ci': ['curl localhost:5984'],
-           'pre_ci_boot': {'image_name': 'vishnurao12/latest16',
-                           'image_tag': 'latest',
-                           'pull': False}},
- 'language': 'none',
- 'services': ['cassandra']}
+language: none
+services:
+ - cassandra
+build:
+ pre_ci_boot:
+  image_name: vishnurao12/latest16
+  image_tag: latest
+  pull: false
+ ci:
+  - cqlsh -e "describe cluster; describe tables"
