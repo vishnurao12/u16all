@@ -1,10 +1,10 @@
 language: none
 services:
- - sqlite
+ - mysql
 build:
-# pre_ci_boot:
-#  image_name: drydock/u16all
-#  image_tag: master
-#  pull: false
+ pre_ci_boot:
+  image_name: vishnurao12/latest16
+  image_tag: latest
+  pull: false
  ci:
-  - echo "Hello, World!"
+  - mysql -e "show databases;"
