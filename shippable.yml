@@ -1,10 +1,10 @@
 language: none
 services:
- - selenium
+ - sqlite
 build:
- pre_ci_boot:
-  image_name: vishnurao12/latest16
-  image_tag: latest
-  pull: false
+# pre_ci_boot:
+#  image_name: drydock/u16all
+#  image_tag: master
+#  pull: false
  ci:
-  - curl --head http://localhost:4444
+  - echo "Hello, World!"
