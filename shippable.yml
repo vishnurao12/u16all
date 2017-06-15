@@ -1,10 +1,10 @@
 language: none
 services:
- - riak
+ - selenium
 build:
  pre_ci_boot:
-  image_name: vishnurao12/latest16	
+  image_name: vishnurao12/latest16
   image_tag: latest
   pull: false
  ci:
-  - riak-admin status
+  - curl --head http://localhost:4444
