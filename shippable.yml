@@ -2,9 +2,9 @@ language: none
 services:
  - sqlite
 build:
-# pre_ci_boot:
-#  image_name: vishnurao12/latest16
-#  image_tag: latest
-#  pull: false
+ pre_ci_boot:
+  image_name: vishnurao12/latest16
+  image_tag: latest
+  pull: false
  ci:
   - echo "Hello, World!"
