@@ -7,4 +7,5 @@ build:
   image_tag: latest
   pull: false
  ci:
-  - (echo "INFO"; echo -e "\nQUIT") | nc 127.0.0.1 6379
+  - redis-server
+  - shippable_service redis stop
