@@ -7,5 +7,5 @@ build:
   image_tag: latest
   pull: false
  ci:
-  - cqlsh -e "describe cluster; describe tables"
+ - cqlsh -e "describe cluster; describe tables"
   - shippable_service cassandra stop
