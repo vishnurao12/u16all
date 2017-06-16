@@ -1,11 +1,11 @@
 language: none
 services:
- - elasticsearch
+ - memcached
 build:
  pre_ci_boot:
   image_name: vishnurao12/latest16
-  image_tag: latest 
+  image_tag: latest
   pull: false
  ci:
-  - curl localhost:9200
-- shippable_service elasticsearch stop
+  - (echo stats; echo quit) | nc 127.0.0.1 11211
+   -shippable_service memcached stop
