@@ -1,11 +1,11 @@
 language: none
 services:
- - couchdb
+ - elasticsearch
 build:
  pre_ci_boot:
   image_name: vishnurao12/latest16
-  image_tag: latest
+  image_tag: latest 
   pull: false
  ci:
-  - curl localhost:5984
-  - shippable_service couchdb stop
+  - curl localhost:9200
+- shippable_service elasticsearch stop
