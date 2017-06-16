@@ -42,7 +42,10 @@ then
   echo "================= Starting redismq ==================="
   printf "\n"
   start_generic_service "redis" "$SHIPPABLE_REDIS_BINARY" "$SHIPPABLE_REDIS_CMD" "$SHIPPABLE_REDIS_PORT";
-elif [ "$1" = "stop" ]
+else 
+	echo "No action executed"
+fi
+if [ "$1" = "stop" ]
 then
   echo "================= Stopping reddismq ==================="
   printf "\n"

@@ -1,10 +1,10 @@
 language: none
 services:
- - sqlite
+ - redis
 build:
-# pre_ci_boot:
-#  image_name: vishnurao12/latest16
-#  image_tag: latest
-#  pull: false
+ pre_ci_boot:
+  image_name: vishnurao12/latest16
+  image_tag: latest
+  pull: false
  ci:
-  - echo "Hello, World!"
+  - (echo "INFO"; echo -e "\nQUIT") | nc 127.0.0.1 6379
