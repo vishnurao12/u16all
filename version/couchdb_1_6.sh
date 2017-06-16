@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-echo "================= Installing CouchDB 1.6.1 ==================="
+#echo "================= Installing CouchDB 1.6.1 ==================="
 
 VERSION=2.0.0
 
@@ -40,3 +40,8 @@ sudo chown -R couchdb:couchdb /usr/share/couchdb /etc/couchdb /usr/bin/couchdb
 sudo chmod -R 0770 /usr/share/couchdb /etc/couchdb /usr/bin/couchdb
 mkdir /var/run/couchdb
 touch /var/run/couchdb/couch.uri
+
+
+
+
+

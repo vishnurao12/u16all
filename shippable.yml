@@ -1,0 +1,10 @@
+language: none
+services:
+ - mysql
+build:
+ pre_ci_boot:
+  image_name: sushmitharai/latest16
+  image_tag: latest
+  pull: false
+ ci:
+  - mysql -e "show databases;"
