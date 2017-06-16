@@ -1,11 +1,11 @@
 language: none
 services:
- - cassandra
+ - couchdb
 build:
  pre_ci_boot:
   image_name: vishnurao12/latest16
   image_tag: latest
   pull: false
  ci:
- - cqlsh -e "describe cluster; describe tables"
-  - shippable_service cassandra stop
+  - curl localhost:5984
+  - shippable_service couchdb stop
