@@ -1,11 +1,11 @@
 language: none
 services:
- - memcached
+ - mongodb
 build:
  pre_ci_boot:
   image_name: vishnurao12/latest16
   image_tag: latest
   pull: false
  ci:
-  - (echo stats; echo quit) | nc 127.0.0.1 11211
-   -shippable_service memcached stop
+  - mongo --eval "db.stats()"
+-shippable_service mongodb stop
